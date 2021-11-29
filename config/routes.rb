@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'diet_menus/index'
+  get 'diet_menus/new'
+  get 'diet_menus/create'
+  get 'diet_menus/show'
+  get 'diet_menus/delete'
   get 'tweets/index'
   get 'tweets/new'
   get 'tweets/create'
