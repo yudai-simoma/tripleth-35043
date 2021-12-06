@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'in_takes/new'
+  get 'in_takes/create'
+  get 'in_takes/show'
+  get 'in_takes/delete'
   get 'records/index'
   get 'diet_menus/index'
   get 'diet_menus/new'
