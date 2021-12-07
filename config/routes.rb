@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'out_takes/new'
+  get 'out_takes/create'
+  get 'out_takes/show'
+  get 'out_takes/delete'
   get 'in_takes/new'
   get 'in_takes/create'
   get 'in_takes/show'
