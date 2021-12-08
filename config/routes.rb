@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'checks/new'
+  get 'checks/create'
+  get 'checks/show'
+  get 'checks/delete'
   get 'out_takes/new'
   get 'out_takes/create'
   get 'out_takes/show'
