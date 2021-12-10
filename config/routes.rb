@@ -1,30 +1,13 @@
 Rails.application.routes.draw do
-  get 'users/show'
-  get 'users/edit'
-  get 'users/update'
-  get 'checks/new'
-  get 'checks/create'
-  get 'checks/show'
-  get 'checks/delete'
-  get 'out_takes/new'
-  get 'out_takes/create'
-  get 'out_takes/show'
-  get 'out_takes/delete'
-  get 'in_takes/new'
-  get 'in_takes/create'
-  get 'in_takes/show'
-  get 'in_takes/delete'
-  get 'records/index'
-  get 'diet_menus/index'
-  get 'diet_menus/new'
-  get 'diet_menus/create'
-  get 'diet_menus/show'
-  get 'diet_menus/delete'
-  get 'tweets/index'
-  get 'tweets/new'
-  get 'tweets/create'
-  get 'tweets/show'
-  get 'tweets/delete'
-  get 'homes/index'
-  root to: "homes#index"
+  devise_for :users
+  root 'homes#index'
+  resources :users, only: [:show, :edit]
+  resources :tweets, only: [:index, :new, :show, :delete]
+  resources :meals, only: [:index, :new, :show, :delete]
+  resources :trainings, only: [:index, :new, :show, :delete]
+  resources :processes, only: [:index, :new, :show, :delete]
+  resources :records, only: [:index]
+  resources :in_takes, only: [:new, :show, :delete]
+  resources :out_takes, only: [:new, :show, :delete]
+  resources :checks, only: [:new, :show, :delete]
 end
